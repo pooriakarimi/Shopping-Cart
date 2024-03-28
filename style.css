@@ -609,7 +609,7 @@ footer {
   padding: 50px 60px 0 60px;
   background-color: var(--backgroundFooter);
   display: grid;
-  grid-template-columns: 30rem 1fr 19rem 19rem 21rem;
+  grid-template-columns: 30rem 1fr 19rem 15rem 21rem;
   grid-template-rows: 36rem 6.5rem;
 }
 .footer__info {

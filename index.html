@@ -9,135 +9,372 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/cabinet-grotesk" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/cabinet-grotesk');
+
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
 
     <title>Nike Store</title>
 </head>
 
 <body>
-    <header class="offers">
-        <p class="offers__title">New here? Save 20% with code: YR24</p>
-    </header>
-    <navbar class="navbar">
-        <ul class="navbar__menu">
-            <li class="navbar__menu--items"><img src="/Assets/icons/logo.png" alt=""></li>
-            <li class="navbar__menu--items"><a href="">Women</a></li>
-            <li class="navbar__menu--items"><a href="">Men</a></li>
-            <li class="navbar__menu--items"><a href="">Kids</a></li>
-            <li class="navbar__menu--items"><a href="">Classics</a></li>
-            <li class="navbar__menu--items"><a href="">Sport</a></li>
-            <li class="navbar__menu--items"><a href="">Sale</a></li>
-        </ul>
-        <div class="navbar__buttonBox">
-            <button class="navbar--btn "><img src="/Assets/icons/liked.svg" alt=""></button>
-            <button class="navbar--btn "><img src="/Assets/icons/cart.svg" alt=""></button>
-            <button class="navbar--btn "><img src="/Assets/icons/profile.svg" alt=""></button>
-        </div>
-    </navbar>
-    <main class="homeScreen">
-        <div class="homeScreen__banner">
-            <h1 class="banner__title">SHOP ALL</h1>
-            <h7 class="feature1 banner--feature">ADJUSTABLE</h7>
-            <h7 class="feature2 banner--feature">SOFT PAD</h7>
-            <img src="/Assets/Images/Navy Minimalist Sport Shoes Instagram Post (2) 1.png" alt="">
-        </div>
+    <main class="container">
+        <header class="offers">
+            <p class="offers__title">New here? Save 20% with code: YR24</p>
+        </header>
+        <nav class="navbar">
+            <ul class="navbar__menu">
+                <li class="navbar__menu--items"><svg aria-hidden="true" class="pre-logo-svg" focusable="false"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" fill="none"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <a xlink:href="" target="_top">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+                                clip-rule="evenodd"></path>
+                        </a>
+                    </svg></li>
+                <li class="navbar__menu--items"><a href="">Women</a></li>
+                <li class="navbar__menu--items"><a href="">Men</a></li>
+                <li class="navbar__menu--items"><a href="">Kids</a></li>
+                <li class="navbar__menu--items"><a href="">Classics</a></li>
+                <li class="navbar__menu--items"><a href="">Sport</a></li>
+                <li class="navbar__menu--items"><a href="">Sale</a></li>
+            </ul>
+            <div class="navbar__buttonBox">
+                <button class="navbar--btn "><img src="/Assets/icons/liked.svg" alt=""></button>
+                <button class="navbar--btn "><img src="/Assets/icons/cart.svg" alt=""></button>
+                <button class="navbar--btn "><img src="/Assets/icons/profile.svg" alt=""></button>
+            </div>
+        </nav>
+        <section class="homeScreen">
+            <div class="homeScreen__banner">
+                <h1 class="banner__title">SHOP ALL</h1>
+                <h7 class="feature1 banner--feature">ADJUSTABLE</h7>
+                <h7 class="feature2 banner--feature">SOFT PAD</h7>
+                <img src="/Assets/Images/Navy Minimalist Sport Shoes Instagram Post (2) 1.png" alt="">
+            </div>
+        </section>
+        <section class="shop">
+            <div class="shop__buttonBox">
+                <button class="shop__btn1 shop--btn">NEW ARRIVALS</button>
+                <button class="shop__btn2 shop--btn">WHAT'S TRENDING</button>
+            </div>
+            <div class="shopProducts">
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/Frame 611.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/Frame 611.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/Frame 612.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="collections">
+            <div class="collections__collection1">
+                <h2 class="collection1__title">Special Collection</h2>
+                <button class="shopNow__btn shopNow__btn--light">Shop Now</button>
+            </div>
+            <div class="collections__collection2">
+                <h2 class="collection2__title">Famous Muiches</h2>
+                <button class="shopNow__btn shopNow__btn--light">Shop Now</button>
+            </div>
+        </section>
+        <section class="bestSelling">
+            <div class="bestSelling__textBox">
+                <h2>BEST <span class="title--modifier">SELL</span>ING</h2>
+                <div class="bestSelling__buttonBox">
+
+                    <button>PREV<img src="/Assets/icons/Group 4.svg"></button>
+
+                    <button>NEXT<img src="/Assets/icons/arrowRight.svg"></button>
+                </div>
+            </div>
+
+            <div class="bestSelling__products">
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__image">
+                        <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+                        <img src="/Assets/Images/air-max-90-flyease.png" alt="">
+
+                        <span for="" class="product__offPercent"></span>
+
+                        <button class="addToCart__btn">Add To Cart</button>
+                    </div>
+                    <div class="product__info">
+                        <h3 class="product__title">Air Max 90 Flyease</h3>
+                        <h4 class="product__price">$160</h4>
+                        <h4 class="product__offPrice"></h4>
+                    </div>
+                </div>
+            </div>
+            <button class="shopNow__btn shopNow__btn--dark">SHOP NOW</button>
+        </section>
+        <section class="categories">
+            <div class="categories__kids">
+                <button class="categories--btn">KIDS</button>
+            </div>
+            <div class="categories__women">
+                <button class="categories--btn">WOMEN</button>
+            </div>
+            <div class="categories__sneakers">
+                <button class="categories--btn">SNEAKERS</button>
+            </div>
+            <div class="categories__boots">
+                <button class="categories--btn">BOOTS</button>
+            </div>
+            <div class="categories__men">
+                <button class="categories--btn">MEN</button>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="advantages__item1">
+                <div class="item--imageBox">
+                    <img class="item--image" src="/Assets/icons/icon-delivery.svg" />
+                </div>
+                <p class="item--title">Free and fast delivery</p>
+                <p class="item--description">free delivery for all orders over 140$</p>
+            </div>
+
+            <div class="advantages__item2">
+                <div class="item--imageBox">
+                    <img class="item--image" src="/Assets/icons/Icon-Customer service.svg" />
+                </div>
+                <p class="item--title">24/7 customer service</p>
+                <p class="item--description">friendly 24/7 customer support</p>
+            </div>
+
+            <div class="advantages__item3">
+                <div class="item--imageBox">
+                    <img class="item--image" src="/Assets/icons/Icon-secure.svg" />
+                </div>
+                <p class="item--title">Money back guarantee</p>
+                <p class="item--description">We return money within 30 days</p>
+            </div>
+        </section>
+        <footer>
+
+            <div class="footer__info">
+                <svg aria-hidden="true" class="pre-logo-svg footer__logo" focusable="false" viewBox="0 0 24 24"
+                    role="img" fill="none">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <p class="info--title">Address:</p>
+                <p class="info--description">
+                    USA, California
+                </p>
+                <p class="info--title">Contact:</p>
+                <p class="info--description">
+                    <a class="info--link" href="tel:+18001234567">1800 123 4567</a>
+                    <a class="info--link" href="mailto:contact@nike.com">contact@nike.com</a>
+                </p>
+                <div class="socialmediaBox">
+                    <a class="socialmedia--icon" href="http://facebook.com"><img src="/Assets/icons/Facebook.svg">
+                    </a>
+                    <a class="socialmedia--icon" href="http://instagram.com"><img src="/Assets/icons/instagram.svg">
+                    </a>
+                    <a class="socialmedia--icon" href="http://x.com">
+                        <img src="/Assets/icons/X.svg">
+                    </a>
+                    <a class="socialmedia--icon" href="http://linkedin.com"><img src="/Assets/icons/linkedin.svg">
+                    </a>
+                    <a class="socialmedia--icon" href="http://youtube.com">
+                        <img src="/Assets/icons/Youtube.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                &copy; Nike Inc., All rights reserved.
+            </div>
+            <ul class="footer__help">
+                <li class="footer--listTitle"><a href="">Help</a></li>
+                <li class="footer--listItem"><a href="">Get Help</a></li>
+                <li class="footer--listItem"><a href="">Order Status</a></li>
+                <li class="footer--listItem"><a href="">Shipping and Delivery</a></li>
+                <li class="footer--listItem"><a href="">Returns</a></li>
+            </ul>
+            <ul class="footer__company">
+                <li class="footer--listTitle"><a href="">Company</a></li>
+                <li class="footer--listItem"><a href="">About Nike</a></li>
+                <li class="footer--listItem"><a href="">News</a></li>
+                <li class="footer--listItem"><a href="">Careers</a></li>
+                <li class="footer--listItem"><a href="">Investors</a></li>
+            </ul>
+            <ul class="footer__promotion">
+                <li class="footer--listTitle"><a href="">Promotions & Discounts</a></li>
+                <li class="footer--listItem"><a href="">Student</a></li>
+                <li class="footer--listItem"><a href="">Military</a></li>
+                <li class="footer--listItem"><a href="">Teacher</a></li>
+                <li class="footer--listItem"><a href="">First Responders & Medical</a></li>
+            </ul>
+        </footer>
     </main>
-    <section class="shop">
-        <div class="shop__buttonBox">
-            <button class="shop__btn1 shop--btn">NEW ARRIVALS</button>
-            <button class="shop__btn1 shop--btn">WHAT'S TRENDING</button>
-        </div>
-        <div class="shopProducts">
-            <div class="product">
-                <div class="product__image">
-                    <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
-
-                    <span for="" class="product__offPercent"></span>
-
-                    <button class="addToCart__btn">Add To Cart</button>
-                </div>
-                <div class="product__info">
-                    <h3 class="product__title"></h3>
-                    <h4 class="product__price"></h4>
-                    <h4 class="product__offPrice"></h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="offers">
-        <div class="offers__collection1">
-            <h2 class="collection1__title">Special Collection</h2>
-            <button class="shopNow__btn shopNow__btn--light">Shop Now</button>
-        </div>
-        <div class="offers__collection2">
-            <h2 class="collection2__title">Famous Muiches</h2>
-            <button class="shopNow__btn shopNow__btn--light">Shop Now</button>
-        </div>
-    </section>
-    <section class="bestSelling">
-        <div class="bestSelling__textBox">
-            <h2>BEST <span class="title--modifier">SELL</span>ING</h2>
-            <button>PREV<img src="/Assets/icons/Group 4.svg"></button>
-
-            <button>NEXT<img src="/Assets/icons/arrowRight.svg"></button>
-        </div>
-        <div class="bestSelling__products">
-
-            <div class="product">
-                <div class="product__image">
-                    <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
-
-                    <span for="" class="product__offPercent">35%</span>
-
-                    <button class="addToCart__btn">Add To Cart</button>
-                </div>
-                <div class="product__info">
-                    <h3 class="product__title">Air Max 2</h3>
-                    <h4 class="product__price">160$</h4>
-                    <h4 class="product__offPrice">120$</h4>
-                </div>
-                <button class="shopNow__btn--light">SHOP NOW</button>
-            </div>
-        </div>
-    </section>
-    <section class="categories">
-        <div class="categories__kids">
-            <button class="categories--btn">KIDS</button>
-        </div>
-        <div class="categories__women">
-            <button class="categories--btn">WOMEN</button>
-        </div>
-        <div class="categories__sneakers">
-            <button class="categories--btn">SNEAKERS</button>
-        </div>
-        <div class="categories__boots">
-            <button class="categories--btn">BOOTS</button>
-        </div>
-        <div class="categories__men">
-            <button class="categories--btn">MEN</button>
-        </div>
-    </section>
-    <section class="advantages">
-        <div class="advantages__item1">
-            <img class="item--image" src="/Assets/icons/icon-delivery.svg" />
-            <p class="item--title">Free and fast delivery</p>
-            <p class="item--description">free delivery for all orders over 140$</p>
-        </div>
-
-        <div class="advantages__item2">
-            <img class="item--image" src="/Assets/icons/Icon-Customer service.svg" />
-            <p class="item--title">24/7 customer service</p>
-            <p class="item--description">friendly 24/7 customer support</p>
-        </div>
-
-        <div class="advantages__item3">
-            <img class="item--image" src="/Assets/icons/Icon-secure.svg" />
-            <p class="item--title">Money back guarantee</p>
-            <p class="item--description">We return money within 30 days</p>
-        </div>
-    </section>
-    <footer>
-
-    </footer>
 </body>
 <script src="index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"

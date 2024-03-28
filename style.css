@@ -609,7 +609,7 @@ footer {
   padding: 50px 60px 0 60px;
   background-color: var(--backgroundFooter);
   display: grid;
-  grid-template-columns: 30rem 1fr 18rem 18rem 18rem;
+  grid-template-columns: 30rem 1fr 19rem 19rem 21rem;
   grid-template-rows: 36rem 6.5rem;
 }
 .footer__info {
@@ -677,14 +677,63 @@ footer {
   margin: 20px 0 0 0;
 }
 .footer__help {
+  width: 170px;
+  font-size: var(--footerItemFontSize);
   grid-row: 1/2;
   grid-column: 3/4;
+  margin: 30px 0 0 0;
 }
 .footer__company {
+  width: 170px;
   grid-row: 1/2;
   grid-column: 4/5;
+  margin: 30px 0 0 0;
 }
 .footer__promotion {
+  width: 200px;
   grid-row: 1/2;
   grid-column: 5/6;
+  margin: 30px 0 0 0;
+}
+.footer--listTitle > a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--textColorLight);
+  text-decoration: none;
+  margin: 0 0 20px 0;
+}
+
+.footer--listItem > a {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: var(--textColorLight);
+  text-decoration: none;
+  margin: 0 0 20px 0;
+}
+.footer--listItem > a:hover,
+.footer--listTitle > a:hover {
+  text-decoration: underline;
+}
+.footer--listItem > a:active,
+.footer--listTitle > a:active {
+  text-decoration: underline;
+  animation: linkClicked 0.2s;
+}
+.footer--listItem {
+  margin: 20px 0 20px 0;
+}
+
+@keyframes linkClicked {
+  0% {
+    transform: scale(1);
+    font-size: 1.6rem;
+  }
+  50% {
+    transform: scale(0.9);
+    font-size: 1.4rem;
+  }
+  100% {
+    transform: scale(1);
+    font-size: 1.6rem;
+  }
 }

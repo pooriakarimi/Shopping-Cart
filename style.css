@@ -752,7 +752,7 @@ footer {
   max-width: 430px;
   background-color: #fff;
   border-radius: 4px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -779,17 +779,22 @@ footer {
 }
 .fa-xmark {
   font-size: 2.1rem;
-  margin: 0 5px 0 0;
 }
-.fa-trash:hover,
-.cartItem--btn:hover,
-.fa-xmark:hover {
+.close--btn {
+  width: 21px;
+  height: 22px;
+  background-color: #fff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.close--btn:hover {
   cursor: pointer;
   border-bottom: 1px solid;
 }
-.fa-trash:active,
-.cartItem--btn:active,
-.fa-xmark:active {
+.close--btn:active {
   cursor: pointer;
   animation: btnClicked 0.2s;
 }
@@ -863,17 +868,40 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.cartItem--btn {
+.cartItem--icon {
   margin: 0 10px 0 10px;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+}
+.cartItem--btn {
+  width: 25px;
+  height: 25px;
+  font-size: 2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  margin: 2px 0;
 }
 .cartItem__controller > p {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+
+  margin: 0 2px;
 }
 .fa-trash {
-  font-size: 1.8rem;
-  margin: 25px 0px 0 0;
+  font-size: 2.1rem;
 }
+.cartItem--btn:hover {
+  border-bottom: 1px solid;
+}
+
+.cartItem--btn:active {
+  animation: btnClicked 0.2s;
+  border: none;
+}
+
 .cart__btnBox {
   width: 380px;
   display: flex;

@@ -54,6 +54,42 @@
             </div>
         </nav>
         <section class="homeScreen">
+            <div class="backdrop"></div>
+            <div class="cart">
+                <div class="cart__textBox">
+                    <h2 class="cart__title">Your Cart</h2>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="cart__content">
+                    <!--  cart content will be loaded dynamically -->
+                    <div class="cart__item">
+                        <div class="cartItem__image">
+                            <img src="/Assets/Images/air-max-90-flyease.png">
+                        </div>
+                        <div class="cartItem__info">
+                            <h3 class="cartItem__title">Air Max 90 Flyease<h3>
+                                    <h4 class="cartItem__price">$160</h4>
+                        </div>
+                        <div class="cartItem__btnBox">
+                            <div class="cartItem__controller">
+                                <i class="cartItem--btn fa-solid fa-chevron-left"></i>
+                                <p>1</p>
+                                <i class="cartItem--btn fa-solid fa-chevron-right"></i>
+                            </div>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="cart__btnBox">
+                    <button class="cart--btn cart--btn--light">clear cart</button>
+                    <button class="cart--btn cart--btn--dark">checkout</button>
+                    <p class="cart__totalPrice">
+                        total price: $45
+                    </p>
+                </div>
+
+            </div>
             <div class="homeScreen__banner">
                 <h1 class="banner__title">SHOP ALL</h1>
                 <h7 class="feature1 banner--feature">ADJUSTABLE</h7>

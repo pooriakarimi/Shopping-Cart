@@ -266,10 +266,16 @@ nav {
   height: 250px;
   background-color: var(--backgroundColorItem);
   display: grid;
-  grid-template-columns: 0.5fr 1fr 0.5fr;
-  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-columns: 35px 1fr 35px;
+  grid-template-rows: 40px 1fr 0.5fr;
   justify-items: center;
   align-items: center;
+}
+.product__image > img {
+  width: 200px;
+  max-height: 190px;
+  justify-self: center;
+  align-self: center;
 }
 .product__likeBtn {
   width: 34px;

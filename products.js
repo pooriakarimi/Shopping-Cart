@@ -1,27 +1,27 @@
 export const productsData = [
   {
     id: 1,
-    title: "Air Max 90 flyease",
+    title: "Air Zoom Pegasus",
     price: 79.99,
-    imageUrl: "/Assets/Images/air-max-90-flyease.png",
+    imageUrl: "./Assets/Images/PikPng.com_kids-running-png_2746451.png",
   },
   {
     id: 2,
     title: "Running Air White",
     price: 85.99,
-    imageUrl: "/Assets/Images/Frame 611.png",
+    imageUrl: "/Assets/Images/PikPng.com_orange-nike-logo-png_5402457.png",
   },
   {
     id: 3,
-    title: "Running Flat Red",
+    title: "Kyrie's Gray Edition",
     price: 59.99,
-    imageUrl: "/Assets/Images/Frame 612.png",
+    imageUrl: "./Assets/Images/PikPng.com_nike-shoes-png_1861171.png",
   },
   {
     id: 4,
     title: "Air Max 02 Green",
     price: 79.99,
-    imageUrl: "./Assets/Images/pngimg.com - running_shoes_PNG5816.png",
+    imageUrl: "./Assets/Images/PikPng.com_shoe-png_1137834.png",
   },
   {
     id: 5,

@@ -9,9 +9,25 @@ const backdrop = document.querySelector(".backdrop");
 const cart = document.querySelector(".cart");
 const cartBtn = document.querySelector(".cart__btn");
 const cartExit = document.querySelector(".close--btn");
+const productsList = document.querySelector(".shopProducts");
 // Cart Button Function
+
 cartBtn.addEventListener("click", cartBtnFunc);
+
 cartExit.addEventListener("click", cartExitFunc);
+
+// Displaying the products on load
+
+document.addEventListener("DOMContentLoaded", () => {
+  const products = new Products();
+  const productsData = products.getProducts();
+  const ui = new UI();
+  ui.displayProducts(productsData);
+  Storage.saveProducts(productsData);
+  ui.getAddToCartBtns();
+});
+
+// DOM Functions
 
 function cartBtnFunc() {
   backdrop.style.display = "block";
@@ -26,6 +42,7 @@ function cartExitFunc() {
 //todo 2. display products
 //todo 3. storage
 
+const cartArray = [];
 import { productsData } from "/products.js";
 
 class Products {
@@ -34,10 +51,41 @@ class Products {
     return productsData;
   }
 }
-class UI {}
+class UI {
+  displayProducts(products) {
+    let result = "";
+    products.forEach((item) => {
+      result += `<div class="product">
+      <div class="product__image">
+          <button class="product__likeBtn"><img src="/Assets/icons/liked.svg"></button>
+          <img src=${item.imageUrl}>
 
-class storage {}
+          <span for="" class="product__offPercent"></span>
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Loaded!");
-});
+          <button class="addToCart__btn " data-id=${item.id}>Add To Cart</button>
+      </div>
+      <div class="product__info">
+          <h3 class="product__title">${item.title}</h3>
+          <h4 class="product__price">$ ${item.price}</h4>
+          <h4 class="product__offPrice"></h4>
+      </div>
+  </div>`;
+      productsList.innerHTML = result;
+    });
+  }
+
+  getAddToCartBtns() {
+    const addToCartBtn = document.querySelectorAll(".addToCart__btn");
+    const addToCartBtnArray = [...addToCartBtn];
+    addToCartBtnArray.forEach((btn) => {
+      const btnID = btn.dataset.id;
+      console.log(btnID);
+    });
+  }
+}
+
+class Storage {
+  static saveProducts(products) {
+    localStorage.setItem("productsData", JSON.stringify(products));
+  }
+}

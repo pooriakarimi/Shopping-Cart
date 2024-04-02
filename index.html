@@ -48,10 +48,16 @@
                 <li class="navbar__menu--items"><a href="">Sale</a></li>
             </ul>
             <div class="navbar__buttonBox">
-                <button class="navbar--btn "><img src="/Assets/icons/liked.svg" alt=""></button>
-                <button class="navbar--btn cart__btn"><img src="/Assets/icons/cart.svg" alt=""></button>
-                <button class="navbar--btn "><img src="/Assets/icons/profile.svg" alt=""></button>
+                <button class="navbar--btn liked__btn"> <ion-icon name="heart-outline"></ion-icon></button>
+                <button class="navbar--btn cart__btn"> <ion-icon name="cart-outline">
+                    </ion-icon>
+                    <div class="cart--badge">
+                        <span class="cart--count">0</span>
+                    </div>
+                </button>
+                <button class="navbar--btn profile__btn"><ion-icon name="person-outline"></ion-icon></button>
             </div>
+
         </nav>
         <section class="homeScreen">
             <div class="backdrop"></div>
@@ -59,35 +65,17 @@
                 <div class="cart__textBox">
                     <h2 class="cart__title">Your Cart</h2>
                     <button class="close--btn"><i class="fa-solid fa-xmark"></i></button>
-                </div>
-                <div class="cart__content">
-                    <!--  cart content will be loaded dynamically -->
-                    <div class="cart__item">
-                        <div class="cartItem__image">
-                            <img src="/Assets/Images/air-max-90-flyease.png">
-                        </div>
-                        <div class="cartItem__info">
-                            <h3 class="cartItem__title">Air Max 90 Flyease<h3>
-                                    <h4 class="cartItem__price">$160</h4>
-                        </div>
-                        <div class="cartItem__btnBox">
-                            <div class="cartItem__controller">
-                                <button class="cartItem--btn dec__btn"><i
-                                        class="cartItem--icon fa-solid fa-chevron-left"></i></button>
-                                <p>1</p>
-                                <button class="cartItem--btn inc__btn"><i
-                                        class="cartItem--icon fa-solid fa-chevron-right"></i></button>
-                            </div>
-                            <button class="cartItem--btn trash--btn"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                    </div>
 
                 </div>
+                <div class="cart__content">
+                    <!-- <p class="cartAlert">your cart is empty</p> -->
+                    <!--  cart content will be loaded dynamically -->
+                </div>
+
                 <div class="cart__btnBox">
                     <button class="cart--btn cart--btn--light">clear cart</button>
                     <button class="cart--btn cart--btn--dark">checkout</button>
                     <p class="cart__totalPrice">
-                        total price: $45
                     </p>
                 </div>
 
@@ -313,5 +301,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
     integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
 </html>

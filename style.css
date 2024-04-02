@@ -7,6 +7,7 @@
   font-size: 62.5%;
   overflow-x: hidden;
   font-family: "Cabinet Grotesk", sans-serif;
+  /* font-family: "Space Grotesk", sans-serif; */
 }
 :root {
   --textColorLight: #ffff;
@@ -23,15 +24,6 @@
   --itemFontSize: 1.6rem;
   --lineHeight: 2.4rem;
   --footerItemFontSize: 1.4rem;
-}
-/* <uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 300 to 700  */
-
-.space-grotesk {
-  font-family: "Space Grotesk", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
 }
 
 body {
@@ -103,7 +95,7 @@ nav {
 }
 
 .navbar__buttonBox {
-  width: 128px;
+  width: 178px;
   grid-row: 1/2;
   grid-column: 3/4;
   align-self: center;
@@ -115,17 +107,13 @@ nav {
   background-color: var(--backgroundColor);
   border: none;
   color: var(--textColorDark);
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   margin: 0 5px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.navbar--btn > img {
-  width: 25px;
-  height: 25px;
 }
 .navbar--btn:hover {
   background-color: var(--backgroundColorItem);
@@ -134,7 +122,24 @@ nav {
 .navbar--btn:active {
   animation: btnClicked 0.1s;
 }
-
+.navbar--btn > ion-icon {
+  width: 35px;
+  height: 35px;
+}
+.cart--badge {
+  margin: 0 0 10px -15px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--textColorDiscount);
+  color: var(--textColorLight);
+  z-index: 1;
+  opacity: 0.9;
+}
 @keyframes btnClicked {
   0% {
     transform: scale(1);
@@ -314,6 +319,7 @@ nav {
   grid-row: 3/4;
   align-self: flex-end;
   opacity: 0;
+  text-transform: capitalize;
 }
 .addToCart__btn:hover,
 .addToCart__btn:active {
@@ -812,6 +818,13 @@ footer {
   justify-content: center;
   align-items: flex-start;
 }
+.cartAlert {
+  width: 260px;
+  font-size: 2.5rem;
+  color: var(--textColorDark);
+  text-transform: uppercase;
+  margin: 0 auto 0 auto;
+}
 .cart__item {
   width: 400px;
   margin: 7px 0;
@@ -837,7 +850,7 @@ footer {
   align-self: flex-start;
 }
 .cartItem__image > img {
-  width: 100px;
+  width: 80px;
 }
 .cartItem__info {
   width: 250px;

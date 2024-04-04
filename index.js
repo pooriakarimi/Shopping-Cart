@@ -22,6 +22,8 @@ const clearCartBtn = document.querySelector(".cart--btn--light");
 const backdrop = document.querySelector(".backdrop");
 const productsList = document.querySelector(".shopProducts");
 
+const navMenu = document.querySelector(".navbar__menu");
+
 // Liked Selectors
 const likedBtn = document.querySelector(".liked__btn");
 const likedExit = document.querySelector(".likedClose--btn");
@@ -31,6 +33,20 @@ const likedCounter = document.querySelector(".liked--count");
 const likedContent = document.querySelector(".liked__content");
 const clearLikedBtn = document.querySelector(".liked--btn--dark");
 
+// Mobile Screen functions
+
+let open;
+
+function openMenu() {
+  if (open) {
+    navMenu.style.display = "none";
+    open = false;
+  } else if (!open) {
+    navMenu.style.display = "block";
+    open = true;
+  }
+}
+
 // Cart Button Function
 
 cartBtn.addEventListener("click", cartBtnFunc);
@@ -39,7 +55,7 @@ cartExit.addEventListener("click", cartExitFunc);
 
 backdrop.addEventListener("click", cartExitGlobal);
 
-// Cart Button Function
+// Liked Button Function
 
 likedBtn.addEventListener("click", likedBtnFunc);
 

@@ -140,6 +140,21 @@ nav {
   z-index: 1;
   opacity: 0.9;
 }
+
+.liked--badge {
+  margin: 0 0 10px -15px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.7rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--textColorDiscount);
+  color: var(--textColorLight);
+  z-index: 1;
+  opacity: 0.9;
+}
 @keyframes btnClicked {
   0% {
     transform: scale(1);
@@ -293,13 +308,17 @@ nav {
   align-items: center;
   grid-column: 3/4;
   grid-row: 1/2;
+  margin: 0 10px 0 0;
 }
-.product__likeBtn > img {
-  width: 26px;
-  height: 26px;
+.product__likeBtn > ion-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--textColorDark);
+  background-color: transparent;
+  pointer-events: none;
 }
 .product__likeBtn:hover,
-.product__likeBtn > img:hover {
+.product__likeBtn > ion-icon:hover {
   cursor: pointer;
 }
 .product__image > img {
@@ -775,7 +794,24 @@ footer {
   top: 120px;
   right: 100px;
 }
-.cart__textBox {
+.liked {
+  width: 100%;
+  max-width: 430px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  overflow-y: hidden;
+  z-index: 6;
+  position: absolute;
+  top: 120px;
+  right: 180px;
+}
+.cart__textBox,
+.liked__textBox {
   width: 390px;
   margin: 15px 0 20px 0;
   grid-row: 1/2;
@@ -785,14 +821,16 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.cart__title {
+.cart__title,
+.liked__title {
   margin: 0 auto 0 0;
   font-size: 2rem;
 }
 .fa-xmark {
   font-size: 2.1rem;
 }
-.close--btn {
+.close--btn,
+.likedClose--btn {
   width: 21px;
   height: 22px;
   background-color: #fff;
@@ -802,15 +840,18 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.close--btn:hover {
+.close--btn:hover,
+.likedClose--btn:hover {
   cursor: pointer;
   border-bottom: 1px solid;
 }
-.close--btn:active {
+.close--btn:active,
+.likedClose--btn:active {
   cursor: pointer;
   animation: btnClicked 0.2s;
 }
-.cart__content {
+.cart__content,
+.liked__content {
   width: 400px;
   min-height: 150px;
   display: flex;
@@ -825,7 +866,16 @@ footer {
   text-transform: uppercase;
   margin: 0 auto 0 auto;
 }
-.cart__item {
+
+.likedAlert {
+  width: 221px;
+  font-size: 2.5rem;
+  color: var(--textColorDark);
+  text-transform: uppercase;
+  margin: 0 auto 0 auto;
+}
+.cart__item,
+.liked__item {
   width: 400px;
   margin: 7px 0;
   grid-row: 2/3;
@@ -836,7 +886,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.cartItem__image {
+.cartItem__image,
+.likedItem__image {
   width: 100px;
   height: 90px;
   background-color: var(--backgroundColorItem);
@@ -849,10 +900,12 @@ footer {
   justify-self: flex-start;
   align-self: flex-start;
 }
-.cartItem__image > img {
+.cartItem__image > img,
+.likedItem__image > img {
   width: 80px;
 }
-.cartItem__info {
+.cartItem__info,
+.likedItem__info {
   width: 250px;
   grid-column: 2/3;
   grid-row: 1/2;
@@ -861,19 +914,22 @@ footer {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.cartItem__title {
+.cartItem__title,
+.likedItem__title {
   width: 200px;
   font-size: 1.5rem;
   font-weight: 400;
   margin: 10px 10px;
 }
-.cartItem__price {
+.cartItem__price,
+.likedItem__price {
   font-size: 1.4rem;
   font-weight: 200;
   margin: 10px 10px;
 }
 
-.cartItem__btnBox {
+.cartItem__btnBox,
+.likedItem__btnBox {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -881,17 +937,21 @@ footer {
   grid-row: 1/3;
   grid-column: 3/4;
 }
-.cartItem__controller {
+.cartItem__controller,
+.likedItem__controller {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.cartItem--icon {
+.cartItem--icon,
+.likedItem--icon {
   margin: 0 10px 0 10px;
   font-size: 2.1rem;
+  pointer-events: none;
 }
-.cartItem--btn {
+.cartItem--btn,
+.likedItem--btn {
   width: 25px;
   height: 25px;
   font-size: 2rem;
@@ -904,24 +964,28 @@ footer {
   cursor: pointer;
   margin: 2px 0;
 }
-.cartItem__controller > p {
+.cartItem__quantity {
   font-size: 2.5rem;
 
   margin: 0 2px;
 }
 .fa-trash {
   font-size: 2.1rem;
+  pointer-events: none;
 }
-.cartItem--btn:hover {
+.cartItem--btn:hover,
+.likedItem--btn:hover {
   border-bottom: 1px solid;
 }
 
-.cartItem--btn:active {
+.cartItem--btn:active,
+.likedItem--btn:active {
   animation: btnClicked 0.2s;
   border: none;
 }
 
-.cart__btnBox {
+.cart__btnBox,
+.liked__btnBox {
   width: 380px;
   display: flex;
   flex-direction: row;
@@ -929,7 +993,8 @@ footer {
   align-items: center;
   margin: 20px 0 15px 0px;
 }
-.cart--btn {
+.cart--btn,
+.liked--btn {
   width: 100px;
   height: 40px;
   font-size: 1.4rem;
@@ -943,28 +1008,35 @@ footer {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-.cart--btn--light {
+.cart--btn--light,
+.liked--btn--light {
   background-color: #fff;
 }
-.cart--btn--dark {
+.cart--btn--dark,
+.liked--btn--dark {
   background-color: black;
   color: var(--textColorLight);
 }
-.cart--btn--dark:hover {
+.cart--btn--dark:hover,
+.liked--btn--dark:hover {
   background-color: #fff;
   color: var(--textColorDark);
 }
 
+.liked--btn--light:hover,
 .cart--btn--light:hover {
   background-color: black;
   color: var(--textColorLight);
 }
-.cart--btn--light:active {
+.cart--btn--light:active,
+.liked--btn--light:active {
   /* background-color: black; */
   color: var(--textColorDark);
   animation: btnClicked 0.1s;
 }
-.cart--btn--dark:active {
+
+.cart--btn--dark:active,
+.liked--btn--dark:active {
   background-color: #fff;
   color: var(--textColorDark);
   animation: btnClicked 0.1s;

@@ -48,7 +48,11 @@
                 <li class="navbar__menu--items"><a href="">Sale</a></li>
             </ul>
             <div class="navbar__buttonBox">
-                <button class="navbar--btn liked__btn"> <ion-icon name="heart-outline"></ion-icon></button>
+                <button class="navbar--btn liked__btn"> <ion-icon name="heart-outline"></ion-icon>
+                    <div class="liked--badge">
+                        <span class="liked--count">0</span>
+                    </div>
+                </button>
                 <button class="navbar--btn cart__btn"> <ion-icon name="cart-outline">
                     </ion-icon>
                     <div class="cart--badge">
@@ -76,6 +80,23 @@
                     <button class="cart--btn cart--btn--light">clear cart</button>
                     <button class="cart--btn cart--btn--dark">checkout</button>
                     <p class="cart__totalPrice">
+                    </p>
+                </div>
+
+            </div>
+            <div class="liked">
+                <div class="liked__textBox">
+                    <h2 class="liked__title">Your Favorites</h2>
+                    <button class="likedClose--btn"><i class="fa-solid fa-xmark"></i></button>
+
+                </div>
+                <div class="liked__content">
+                    <!--  liked content will be loaded dynamically -->
+
+                </div>
+
+                <div class="liked__btnBox">
+                    <button class="liked--btn liked--btn--dark">clear list</button>
                     </p>
                 </div>
 

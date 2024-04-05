@@ -4,6 +4,7 @@
 //todo datas be saved on localStorage  or sessionStorage. If not available show empty cart
 
 import { productsData } from "/products.js";
+import { bestSellingData } from "./products.js";
 
 // Selectors
 
@@ -21,8 +22,12 @@ const clearCartBtn = document.querySelector(".cart--btn--light");
 // Global Selectors
 const backdrop = document.querySelector(".backdrop");
 const productsList = document.querySelector(".shopProducts");
-
+const bestSellingList = document.querySelector(".bestSelling__products");
+const dropDownBtn = [...document.querySelectorAll(".dropDown--btn")];
+const dropDownMenu = [...document.querySelectorAll(".footer--list")];
 const navMenu = document.querySelector(".navbar__menu");
+const menuBtn = document.querySelector(".menu--btn");
+const navMenuCloseBtn = document.querySelector(".navbar__menu--closeBtn");
 
 // Liked Selectors
 const likedBtn = document.querySelector(".liked__btn");
@@ -32,20 +37,6 @@ const likedBadge = document.querySelector(".liked--badge");
 const likedCounter = document.querySelector(".liked--count");
 const likedContent = document.querySelector(".liked__content");
 const clearLikedBtn = document.querySelector(".liked--btn--dark");
-
-// Mobile Screen functions
-
-let open;
-
-function openMenu() {
-  if (open) {
-    navMenu.style.display = "none";
-    open = false;
-  } else if (!open) {
-    navMenu.style.display = "block";
-    open = true;
-  }
-}
 
 // Cart Button Function
 
@@ -63,11 +54,20 @@ likedExit.addEventListener("click", likedExitFunc);
 
 backdrop.addEventListener("click", likedExitGlobal);
 
+//Nav Menu Button Function
+
+menuBtn.addEventListener("click", navbarDropDownFunc);
+
+navMenuCloseBtn.addEventListener("click", menuExitFunc);
+
+backdrop.addEventListener("click", likedExitGlobal);
+
 // Displaying the products on load
 
 document.addEventListener("DOMContentLoaded", () => {
   const products = new Products();
   const productsData = products.getProducts();
+  const bestSellingData = products.getBestSellings();
   const ui = new UI();
   Storage.getCart(cartArray) || Storage.saveCart(cartArray);
   Storage.getLiked(likedArray) || Storage.saveLiked(likedArray);
@@ -85,11 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ui.setupApp();
   ui.displayProducts(productsData);
+  ui.displayBestSellings(bestSellingData);
   ui.getAddToCartBtns();
   ui.getLikeBtns();
   ui.cartLogic();
   ui.likedLogic();
+  ui.dropDownFunc(dropDownBtn, dropDownMenu);
   Storage.saveProducts(productsData);
+  Storage.saveBestSellings(bestSellingData);
 });
 
 // DOM Functions
@@ -119,11 +122,22 @@ function likedExitGlobal() {
   backdrop.style.display = "none";
   liked.style.display = "none";
 }
+function navbarDropDownFunc() {
+  backdrop.style.display = "block";
+  navMenu.style.display = "flex";
+}
+function menuExitFunc() {
+  backdrop.style.display = "none";
+  navMenu.style.display = "none";
+}
 //Classes
 class Products {
   //get from api  end point !
   getProducts() {
     return productsData;
+  }
+  getBestSellings() {
+    return bestSellingData;
   }
 }
 
@@ -155,6 +169,27 @@ class UI {
       productsList.innerHTML = result;
     });
   }
+  displayBestSellings(products) {
+    let result = "";
+    products.forEach((item) => {
+      result += `<div class="product">
+      <div class="product__image">
+          <button class="product__likeBtn" data-id=${item.id}><ion-icon name="heart-outline" ></ion-icon></button>
+          <img src=${item.imageUrl}>
+
+          <span for="" class="product__offPercent"></span>
+
+          <button class="addToCart__btn " data-id=${item.id}>Add To Cart</button>
+      </div>
+      <div class="product__info">
+          <h3 class="product__title">${item.title}</h3>
+          <h4 class="product__price">$ ${item.price}</h4>
+          <h4 class="product__offPrice"></h4>
+      </div>
+  </div>`;
+      bestSellingList.innerHTML = result;
+    });
+  }
 
   getAddToCartBtns() {
     const addToCartBtn = [...document.querySelectorAll(".addToCart__btn")];
@@ -173,6 +208,11 @@ class UI {
 
         //get product from products
         const addedProducts = { ...Storage.getProducts(id), quantity: 1 };
+        console.log(Storage.getProducts(id));
+        // const bestSellingAddedProducts = {
+        //   ,
+        // };
+
         //add to cart
         cartArray = [...cartArray, addedProducts];
 
@@ -187,6 +227,7 @@ class UI {
       });
     });
   }
+
   getLikeBtns() {
     const likeBtn = [...document.querySelectorAll(".product__likeBtn")];
     likedButtonsDOM = likeBtn;
@@ -220,6 +261,30 @@ class UI {
       });
     });
   }
+  dropDownFunc(buttonArray, listArray) {
+    buttonArray.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        const menuID = event.target.dataset.id;
+        const wantedMenu = listArray.filter((list) => {
+          if (list.dataset.id === menuID) {
+            return list.dataset.id;
+          }
+        });
+
+        wantedMenu.forEach((list) => {
+          list.classList.toggle("hide");
+          const classList = [...list.classList.value.split(" ")];
+
+          if (classList.includes("hide")) {
+            btn.innerHTML = `<ion-icon name="add-outline"></ion-icon>`;
+          } else {
+            btn.innerHTML = `<ion-icon name="remove-outline"></ion-icon>`;
+          }
+        });
+      });
+    });
+  }
+
   setCartValue(cart) {
     if ((cartCounter.innerText = "0")) {
       cartBadge.style.display = "none";
@@ -460,9 +525,18 @@ class Storage {
   static saveProducts(products) {
     localStorage.setItem("productsData", JSON.stringify(products));
   }
+  static saveBestSellings(products) {
+    localStorage.setItem("bestSellingsData", JSON.stringify(products));
+  }
   static getProducts(id) {
     const _products = JSON.parse(localStorage.getItem("productsData"));
     return _products.find((p) => p.id == id);
+  }
+  static getBestSellings(id) {
+    const _bestSellings = JSON.parse(localStorage.getItem("bestSellingsData"));
+    return _bestSellings.find((p) => {
+      p.id == id;
+    });
   }
   static saveCart(cart) {
     localStorage.setItem("cartData", JSON.stringify(cart));

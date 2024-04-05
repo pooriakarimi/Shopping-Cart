@@ -208,14 +208,16 @@ class UI {
 
         //get product from products
         const addedProducts = { ...Storage.getProducts(id), quantity: 1 };
-        console.log(Storage.getProducts(id));
-        // const bestSellingAddedProducts = {
-        //   ,
-        // };
-
+        const bestAddedProducts = {
+          ...Storage.getBestSellings(id),
+          quantity: 1,
+        };
         //add to cart
-        cartArray = [...cartArray, addedProducts];
-
+        if (event.target.dataset.id == addedProducts.id) {
+          cartArray = [...cartArray, addedProducts];
+        } else if (event.target.dataset.id == bestAddedProducts.id) {
+          cartArray = [...cartArray, bestAddedProducts];
+        }
         //save cart to localStorge
         Storage.saveCart(cartArray);
         //update cart value
@@ -534,9 +536,7 @@ class Storage {
   }
   static getBestSellings(id) {
     const _bestSellings = JSON.parse(localStorage.getItem("bestSellingsData"));
-    return _bestSellings.find((p) => {
-      p.id == id;
-    });
+    return _bestSellings.find((p) => p.id == id);
   }
   static saveCart(cart) {
     localStorage.setItem("cartData", JSON.stringify(cart));

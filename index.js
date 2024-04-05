@@ -247,10 +247,19 @@ class UI {
         btn.firstElementChild.style.color = "var(--textColorDiscount)";
         btn.disabled = true;
 
-        //get product from products
-        const likedProducts = { ...Storage.getProducts(id) };
+        const likedProducts = { ...Storage.getProducts(id), quantity: 1 };
+        const bestLikedProducts = {
+          ...Storage.getBestSellings(id),
+          quantity: 1,
+        };
+
         //add to liked
-        likedArray = [...likedArray, likedProducts];
+
+        if (event.target.dataset.id == likedProducts.id) {
+          likedArray = [...likedArray, likedProducts];
+        } else if (event.target.dataset.id == bestLikedProducts.id) {
+          likedArray = [...likedArray, bestLikedProducts];
+        }
 
         //save liked to localStorge
         Storage.saveLiked(likedArray);

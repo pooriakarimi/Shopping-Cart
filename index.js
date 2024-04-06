@@ -60,7 +60,7 @@ menuBtn.addEventListener("click", navbarDropDownFunc);
 
 navMenuCloseBtn.addEventListener("click", menuExitFunc);
 
-backdrop.addEventListener("click", likedExitGlobal);
+backdrop.addEventListener("click", menuExitGlobal);
 
 // Displaying the products on load
 
@@ -127,6 +127,10 @@ function navbarDropDownFunc() {
   navMenu.style.display = "flex";
 }
 function menuExitFunc() {
+  backdrop.style.display = "none";
+  navMenu.style.display = "none";
+}
+function menuExitGlobal() {
   backdrop.style.display = "none";
   navMenu.style.display = "none";
 }

@@ -67,7 +67,7 @@
   .navbar__menu {
     width: 100%;
     max-width: 340px;
-    height: 500px;
+    height: 100vh;
     background-color: var(--backgroundColor);
     display: none;
     flex-direction: column;
@@ -882,8 +882,9 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 120px;
-    right: 22.5px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .liked {
     width: 100%;
@@ -898,8 +899,9 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 120px;
-    right: 22.5px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .cart__textBox,
   .liked__textBox {
@@ -1185,7 +1187,7 @@
   .navbar__menu {
     width: 100%;
     max-width: 340px;
-    height: 500px;
+    height: 100vh;
     background-color: var(--backgroundColor);
     display: none;
     flex-direction: column;
@@ -1328,7 +1330,7 @@
   }
   .homeScreen__banner {
     width: 100%;
-    max-width: 370px;
+    max-width: 390px;
     height: 300px;
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
@@ -1336,7 +1338,7 @@
   }
   .banner__title {
     font-family: "Teko", sans-serif;
-    font-size: 9.5rem;
+    font-size: 10.5rem;
     color: var(--textColorShadow);
     opacity: 20%;
     z-index: -1;
@@ -1346,8 +1348,8 @@
     align-self: center;
   }
   .homeScreen__banner > img {
-    width: 260px;
-    height: 200px;
+    width: 280px;
+    height: 220px;
     grid-column: 2/3;
     grid-row: 2/3;
     z-index: 1;
@@ -1388,7 +1390,7 @@
     align-items: center;
   }
   .shop--btn {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: var(--lineHeight);
     color: var(--textColorLight);
     border-radius: 100px;
@@ -1396,13 +1398,13 @@
   }
 
   .shop__btn1 {
-    width: 130px;
+    width: 140px;
     height: 40px;
     background-color: var(--buttonColorBlue);
     border: var(--buttonColorBlueBorder) solid 7px;
   }
   .shop__btn2 {
-    width: 150px;
+    width: 160px;
     height: 40px;
     background-color: var(--buttonColorGreen);
     border: var(--buttonColorGreenBorder) solid 7px;
@@ -1417,7 +1419,8 @@
     animation: btnClicked 0.1s;
   }
   .shopProducts {
-    width: 356px;
+    width: 90%;
+    max-width: 416px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1425,14 +1428,14 @@
     margin: 20px 0 60px 0;
   }
   .product {
-    min-width: 270px;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     justify-self: center;
     border-radius: 4px;
   }
   .product__image {
-    width: 270px;
+    width: 280px;
     height: 250px;
     background-color: var(--backgroundColorItem);
     display: grid;
@@ -1442,8 +1445,8 @@
     align-items: center;
   }
   .product__image > img {
-    width: 200px;
-    max-height: 190px;
+    width: 210px;
+    max-height: 200px;
     justify-self: center;
     align-self: center;
   }
@@ -1477,7 +1480,7 @@
     align-self: center;
   }
   .addToCart__btn {
-    width: 270px;
+    width: 280px;
     height: 41px;
     background-color: black;
     border: none;
@@ -1590,10 +1593,10 @@
     align-items: center;
   }
   .bestSelling__textBox > h2 {
-    width: 235px;
+    width: 180px;
     font-size: 2.8rem;
     color: var(--backgroundColor);
-    margin: 0 0 0 15px;
+    margin: 0 auto 0 4.5rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
   }
@@ -1628,7 +1631,7 @@
     width: 45px;
   }
   .bestSelling__products {
-    max-width: 30rem;
+    max-width: 40rem;
     margin: 30px 0 0px 0;
     overflow-x: scroll !important;
     display: flex;
@@ -1653,7 +1656,7 @@
     width: 100%;
     max-width: 479.99px;
     display: grid;
-    grid-template-columns: 187.45px 187.45px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 11rem 11rem 20rem;
     align-items: center;
     justify-items: center;
@@ -1678,7 +1681,8 @@
     animation: btnClicked 0.1s;
   }
   .categories__kids {
-    width: 479.98px;
+    width: 100%;
+    max-width: 479.98px;
     height: 11rem;
     background-image: url(/Assets/Images/kids.jpg);
     background-size: 479px 140px;
@@ -1691,11 +1695,12 @@
     grid-row: 1/2;
   }
   .categories__women {
-    width: 187.5px;
+    width: 100%;
+    max-width: 240px;
     height: 11rem;
     background-image: url(/Assets/Images/women.jpg);
     background-position: center;
-    background-size: 187.5px;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1704,11 +1709,12 @@
     grid-row: 2/3;
   }
   .categories__men {
-    width: 187.5px;
+    width: 100%;
+    max-width: 240px;
     height: 11rem;
     background-image: url(/Assets/Images/men.png);
     background-position: center;
-    background-size: 187.5px;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1717,10 +1723,11 @@
     grid-row: 2/3;
   }
   .categories__sneakers {
-    width: 187.5px;
+    max-width: 240px;
+    width: 100%;
     height: 100%;
     background-image: url(/Assets/Images/sneakers.png);
-    background-size: 187.5px 200px;
+    background-size: 100% 200px;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -1730,11 +1737,12 @@
     grid-row: 3/4;
   }
   .categories__boots {
-    width: 187.5px;
+    width: 100%;
+    max-width: 240px;
     height: 20rem;
     background-image: url(/Assets/Images/boots.jpg);
     background-position: center;
-    background-size: 187.5px;
+    background-size: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1754,7 +1762,7 @@
   .advantages__item1,
   .advantages__item2,
   .advantages__item3 {
-    width: 290px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1777,6 +1785,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .item--title {
     font-size: 2.4rem;
     text-transform: uppercase;
@@ -1813,7 +1822,7 @@
     pointer-events: none;
   }
   .footer__list--btnBox {
-    width: 340px;
+    width: 390px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1825,7 +1834,7 @@
     opacity: 0;
   }
   .footer--list {
-    width: 350px;
+    width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1835,7 +1844,7 @@
   }
   .footer__info {
     width: 100%;
-    max-width: 300px;
+    max-width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1899,7 +1908,8 @@
     order: 5;
   }
   .footer__helpBox {
-    width: 350px;
+    width: 100%;
+    max-width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1912,7 +1922,7 @@
   }
 
   .footer__companyBox {
-    width: 350px;
+    width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1924,7 +1934,7 @@
   }
 
   .footer__promotionBox {
-    width: 350px;
+    width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -2000,8 +2010,9 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 120px;
-    right: 22.5px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .liked {
     width: 100%;
@@ -2016,8 +2027,9 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 120px;
-    right: 22.5px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .cart__textBox,
   .liked__textBox {

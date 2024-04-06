@@ -882,7 +882,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -899,7 +899,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -2015,7 +2015,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -2032,7 +2032,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -3152,7 +3152,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -3169,7 +3169,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -4291,7 +4291,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -4308,7 +4308,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -5433,7 +5433,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -5450,7 +5450,7 @@
     overflow-y: hidden;
     z-index: 6;
     position: absolute;
-    top: 200px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
